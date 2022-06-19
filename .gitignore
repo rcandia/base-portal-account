@@ -13,5 +13,7 @@ node_modules
 .yalc
 yalc.lock
 
+.env
+
 # Yarn
 yarn-error.log
