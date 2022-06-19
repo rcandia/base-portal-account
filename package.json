@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vite --port 3000 --open",
+    "build": "rm -rf ./dist && vite build",
+    "preview": "concurrently 'vite build --watch' 'vite preview --port 3000'",
+    "commit": "npx git-cz",
+    "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,vue}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/node": "17.0.12",
+    "@types/nprogress": "^0.2.0",
+    "@unocss/core": "^0.39.3",
+    "@unocss/preset-attributify": "^0.39.3",
+    "@unocss/reset": "^0.39.3",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "@vueuse/core": "^6.9.2",
+    "axios": "^0.24.0",
+    "concurrently": "^7.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.6.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "nprogress": "^0.2.0",
+    "single-spa-css": "^2.0.0",
+    "single-spa-vue": "^2.5.1",
+    "typescript": "4.5.4",
+    "unocss": "^0.39.3",
+    "unplugin-auto-import": "^0.5.5",
+    "unplugin-vue-components": "^0.17.11",
+    "vee-validate": "^4.5.3",
+    "vite": "^2.7.10",
+    "vite-plugin-pages": "^0.19.9",
+    "vite-plugin-vue-layouts": "^0.5.0",
+    "vue": "^3.2.20",
+    "vue-router": "^4.0.11",
+    "yup": "^0.32.11"
+  },
+  "dependencies": {},
+  "lint-staged": {
+    "*.{vue,ts,js}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+    <body style="margin: 0">
+        <script type="module">
+          import {
+            registerApplication,
+            start,
+          } from 'https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/es2015/single-spa.dev.js'
+          
+          registerApplication({
+            name: '@org/account',
+            app: () => import('/src/main.ts'),
+            activeWhen: ['/'],
+          })
+
+          start()
+        </script>
+    </body>
+</html>

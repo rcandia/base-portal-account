@@ -1,0 +1,10 @@
+{
+ "extends": [
+    "@antfu"
+  ],
+  "rules":{
+    "vue/valid-v-slot": ["error", { "allowModifiers": true }],
+    "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "no-type-imports" }],
+    "vue/define-macros-order": "off"
+  }
+}
